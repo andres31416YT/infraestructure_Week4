@@ -1,0 +1,37 @@
+# --- Terraform ---
+# Ignorar archivos locales de estado (contienen datos sensibles de tu cuenta)
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*
+
+# Ignorar el directorio de inicialización (contiene binarios de los providers)
+.terraform/
+
+# Ignorar archivos de variables con datos sensibles (donde pones tus secretos)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignorar archivos de configuración de CLI y credenciales
+.terraformrc
+terraform.rc
+
+# --- AWS & Entorno ---
+# Ignorar credenciales locales de AWS (si las copiaste por error)
+.aws/
+credentials
+.env
+.env.*
+
+# --- Archivos de Sistema y Logs ---
+.DS_Store
+Thumbs.db
+*.log
+
+# --- Archivos específicos de la tarea ---
+# No subas el PDF de evidencia al repositorio de código (se entrega por separado)
+*.pdf
