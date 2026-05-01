@@ -38,7 +38,7 @@ resource "aws_lambda_permission" "apigw_upload" {
 }
 
 # Asegura que el grupo de logs exista y que la Lambda tenga donde escribir
-resource "aws_cloudwatch_log_group" "upload_log_group" {
-  name              = "/aws/lambda/${aws_lambda_function.upload.function_name}"
-  retention_in_days = 7
-}
+#resource "aws_cloudwatch_log_group" "upload_log_group" {
+#  name              = "/aws/lambda/${aws_lambda_function.upload.function_name}"
+#  retention_in_days = 7
+#}
