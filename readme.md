@@ -48,7 +48,7 @@ Para el entorno "DEV"
 - terraform apply -var-file="dev.tfvars" -auto-approve
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
-  --data-binary "@foto.png"
+  --data-binary "@../foto.png"
 - terraform destroy -var-file="dev.tfvars" -auto-approve
 
 Para el entorno "QA"
@@ -57,7 +57,7 @@ Para el entorno "QA"
 - terraform apply -var-file="qa.tfvars" -auto-approve
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
-  --data-binary "@foto.png"
+  --data-binary "@../foto.png"
 - terraform destroy -var-file="qa.tfvars" -auto-approve
 
 Para el entorno "PROD"
@@ -66,5 +66,5 @@ Para el entorno "PROD"
 - terraform apply -var-file="prod.tfvars" -auto-approve
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
-  --data-binary "@foto.png"
+  --data-binary "@../foto.png"
 - terraform destroy -var-file="prod.tfvars" -auto-approve
