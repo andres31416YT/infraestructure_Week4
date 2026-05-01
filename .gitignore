@@ -9,7 +9,6 @@ crash.*
 .terraform/
 
 # Ignorar archivos de variables con datos sensibles (donde pones tus secretos)
-*.tfvars
 *.tfvars.json
 override.tf
 override.tf.json
@@ -35,3 +34,5 @@ Thumbs.db
 # --- Archivos específicos de la tarea ---
 # No subas el PDF de evidencia al repositorio de código (se entrega por separado)
 *.pdf
+
+node_modules/

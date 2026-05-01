@@ -38,3 +38,36 @@ Para la validación de este proyecto, se han considerado los siguientes puntos c
 ## ⚠️ Consideraciones de Seguridad
 - No se deben incluir credenciales de AWS en el código fuente.
 - Todos los recursos deben cumplir con las etiquetas (tags) correspondientes para identificación por entorno.
+
+## Pasos para ejecutar
+-  cd terraform
+- terraform init
+Para el entorno "DEV"
+- terraform workspace new dev
+- terraform plan -var-file="dev.tfvars"
+- terraform apply -var-file="dev.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/png" \
+  --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-dev-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
+- terraform destroy -var-file="dev.tfvars" -auto-approve
+
+Para el entorno "QA"
+- terraform workspace new qa
+- terraform plan -var-file="qa.tfvars"
+- terraform apply -var-file="qa.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/png" \
+  --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-qa-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
+- terraform destroy -var-file="qa.tfvars" -auto-approve
+
+Para el entorno "PROD"
+- terraform workspace new prod
+- terraform plan -var-file="prod.tfvars"
+- terraform apply -var-file="prod.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/png" \
+  --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-prod-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
+- terraform destroy -var-file="prod.tfvars" -auto-approve
