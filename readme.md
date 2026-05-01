@@ -38,3 +38,33 @@ Para la validación de este proyecto, se han considerado los siguientes puntos c
 ## ⚠️ Consideraciones de Seguridad
 - No se deben incluir credenciales de AWS en el código fuente.
 - Todos los recursos deben cumplir con las etiquetas (tags) correspondientes para identificación por entorno.
+
+## Pasos para ejecutar
+-  cd terraform
+- terraform init
+Para el entorno "DEV"
+- terraform workspace new dev
+- terraform plan -var-file="dev.tfvars"
+- terraform apply -var-file="dev.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/jpeg" \
+  --data-binary "@/ruta/a/tu/foto.jpg"
+- terraform destroy -var-file="dev.tfvars" -auto-approve
+
+Para el entorno "QA"
+- terraform workspace new dev
+- terraform plan -var-file="dev.tfvars"
+- terraform apply -var-file="dev.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/jpeg" \
+  --data-binary "@/ruta/a/tu/foto.jpg"
+- terraform destroy -var-file="dev.tfvars" -auto-approve
+
+Para el entorno "PROD"
+- terraform workspace new dev
+- terraform plan -var-file="dev.tfvars"
+- terraform apply -var-file="dev.tfvars" -auto-approve
+- curl -X POST <TU_API_URL_AQUI> \
+  -H "Content-Type: image/jpeg" \
+  --data-binary "@/ruta/a/tu/foto.jpg"
+- terraform destroy -var-file="dev.tfvars" -auto-approve
