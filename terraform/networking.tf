@@ -51,7 +51,7 @@ resource "aws_vpc_endpoint" "sqs" {
 
 # Security Group para el Endpoint de SQS
 resource "aws_security_group" "vpce_sqs_sg" {
-  name        = "sg-vpce-sqs-${var.environment}"
+  name        = "${var.project_name}-vpce-sqs-sg-${var.environment}"
   description = "Permite trafico HTTPS hacia el endpoint de SQS"
   vpc_id      = aws_vpc.main.id
 
