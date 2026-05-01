@@ -1,4 +1,4 @@
-# AWS + Lambda Integration: Arquitectura Multientorno
+# AWS + Lambda Integration: Arquitectura Multientorno v1.0
 
 Este proyecto consiste en la implementación de una arquitectura serverless escalable en Amazon Web Services, diseñada mediante Infraestructura como Código (IaC) para soportar un ciclo de vida de desarrollo completo.
 
