@@ -49,6 +49,7 @@ Para el entorno "DEV"
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
   --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-dev-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
 - terraform destroy -var-file="dev.tfvars" -auto-approve
 
 Para el entorno "QA"
@@ -58,6 +59,7 @@ Para el entorno "QA"
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
   --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-qa-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
 - terraform destroy -var-file="qa.tfvars" -auto-approve
 
 Para el entorno "PROD"
@@ -67,4 +69,5 @@ Para el entorno "PROD"
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/png" \
   --data-binary "@../foto.png"
+- Ve a la consola de S3 en el navegador, selecciona el bucket image-processor-prod-images-upao-pagan y haz clic en el boton "Empty" (Vaciar).
 - terraform destroy -var-file="prod.tfvars" -auto-approve
