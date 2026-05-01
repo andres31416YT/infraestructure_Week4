@@ -52,19 +52,19 @@ Para el entorno "DEV"
 - terraform destroy -var-file="dev.tfvars" -auto-approve
 
 Para el entorno "QA"
-- terraform workspace new dev
-- terraform plan -var-file="dev.tfvars"
-- terraform apply -var-file="dev.tfvars" -auto-approve
+- terraform workspace new qa
+- terraform plan -var-file="qa.tfvars"
+- terraform apply -var-file="qa.tfvars" -auto-approve
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/jpeg" \
   --data-binary "@/ruta/a/tu/foto.jpg"
-- terraform destroy -var-file="dev.tfvars" -auto-approve
+- terraform destroy -var-file="qa.tfvars" -auto-approve
 
 Para el entorno "PROD"
-- terraform workspace new dev
-- terraform plan -var-file="dev.tfvars"
-- terraform apply -var-file="dev.tfvars" -auto-approve
+- terraform workspace new prod
+- terraform plan -var-file="prod.tfvars"
+- terraform apply -var-file="prod.tfvars" -auto-approve
 - curl -X POST <TU_API_URL_AQUI> \
   -H "Content-Type: image/jpeg" \
   --data-binary "@/ruta/a/tu/foto.jpg"
-- terraform destroy -var-file="dev.tfvars" -auto-approve
+- terraform destroy -var-file="prod.tfvars" -auto-approve
